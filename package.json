@@ -1,0 +1,26 @@
+{
+  "name": "js-fatigue",
+  "version": "1.0.0",
+  "description": "demo another angle",
+  "main": "index.html",
+  "scripts": {
+    "build": "babel app --out-dir dist",
+    "build:watch": "babel app --watch --out-dir dist",
+    "start": "npm run build && lite-server && npm run build:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sedona-Solutions/demo-another-angle.git"
+  },
+  "author": "Sedona Solutions",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Sedona-Solutions/demo-another-angle/issues"
+  },
+  "homepage": "https://github.com/Sedona-Solutions/demo-another-angle#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "lite-server": "^2.2.0"
+  }
+}

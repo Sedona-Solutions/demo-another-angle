@@ -1,0 +1,5 @@
+{
+  "port": 8080,
+  "files": ["./index.html", "./app/**/*.{html,htm,css,js}", "./bower_components/**/*.{js,css}"],
+  "server": { "baseDir": "." }
+}

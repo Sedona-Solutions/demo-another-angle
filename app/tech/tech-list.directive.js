@@ -13,6 +13,6 @@ angular.module('jsFatigueApp.tech')
                     $scope.techs.splice(index, 1);
                 };
             },
-            templateUrl: 'tech/tech-list.directive.tpl.html'
+            templateUrl: 'app/tech/tech-list.directive.tpl.html'
         };
     });
