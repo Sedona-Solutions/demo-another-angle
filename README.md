@@ -25,5 +25,5 @@ Then, serve the root folder using your favorite tool. (nginx, Apache, http-serve
 Each branch of this repository represent a stage in an evolution from straight `Angular 1 / ES5` to `Angular 2 / Typescript`. Here is the suggested order of branches to read it:
 
 - [`es5`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es5) contains the app as a 2-file structure, using ES5 with no components or service and static data
-- [`es5-http`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es5-http) adds a service that requests a previously static list using an HTTP call
-- [`es6`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es6) moves from an es5 syntax to es6
+- [`SoC`](https://github.com/Sedona-Solutions/demo-another-angle/tree/SoC) refactoring for separation of concerns thanks to the `service` and `directive` angular helpers, and use the built-in `$http` service to make an Ajax request
+- [`es6`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es6) first moves from an es5 syntax to es6 using class and arrow functions
