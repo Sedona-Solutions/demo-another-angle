@@ -1,1 +1,1 @@
-angular.module('jsFatigueApp.layout', []);
+angular.module('jsFatigueApp.layout', ['sdn.SearchBar']);

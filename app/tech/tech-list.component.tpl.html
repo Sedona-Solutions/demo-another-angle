@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="(index, tech) in $ctrl.techs | filter: $ctrl.query">
+            <li class="list-group-item" ng-repeat="(index, tech) in $ctrl.techs | filter: $ctrl.filter">
                   <span>
                       <span>{{tech.name}}</span>
                       <button class="btn btn-sm btn-danger pull-right" ng-click="$ctrl.remove(index)"><span class="glyphicon glyphicon-remove"></span></button>
