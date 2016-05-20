@@ -1,11 +1,12 @@
-var jsFatigueApp = angular.module('jsFatigueApp', []);
+var jsFatigueApp = angular.module('jsFatigueApp', ['jsFatigueApp.techList']);
 
-jsFatigueApp.controller('TechListCtrl', function($scope, $http) {
-    $http.get('/seed/techs.json').success(function(res) {
-        $scope.techs = res;
-    })
+jsFatigueApp.controller('TechListCtrl', function ($scope, TechListService) {
 
-    $scope.remove = function(index) {
+    TechListService.getTechs().then(function (techs) {
+        $scope.techs = techs.data;
+    });
+
+    $scope.remove = function (index) {
         $scope.techs.splice(index, 1);
     };
 });

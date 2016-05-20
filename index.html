@@ -24,18 +24,20 @@
     </nav>
     <div class="container">
         <div class="row">
-            <ul class="list-group">
-                <li class="list-group-item" ng-repeat="(index, tech) in techs | filter:query">
-                    <span>
-                        <span>{{tech.name}}</span>
-                        <button class="btn btn-sm btn-danger pull-right" ng-click="remove(index)"><span class="glyphicon glyphicon-remove"></span></button>
-                    </span>
-                </li>
-            </ul>
+          <ul class="list-group">
+              <li class="list-group-item" ng-repeat="(index, tech) in techs | filter: query">
+                  <span>
+                      <span>{{tech.name}}</span>
+                      <button class="btn btn-sm btn-danger pull-right" ng-click="remove(index)"><span class="glyphicon glyphicon-remove"></span></button>
+                  </span>
+              </li>
+          </ul>
         </div>
     </div>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="tech/_list.js"></script>
+    <script src="tech/list_service.js"></script>
 </body>
 
 </html>
