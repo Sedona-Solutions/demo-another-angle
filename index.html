@@ -1,4 +1,4 @@
-<html ng-app="jsFatigueApp">
+<html>
 
 <head>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -10,34 +10,16 @@
     </style>
 </head>
 
-<body ng-controller="TechListCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">JS Fatigue</a>
-            </div>
-            <div class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input class="form-control" ng-model="query" placeholder="Search..." />
-                </div>
-            </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-          <ul class="list-group">
-              <li class="list-group-item" ng-repeat="(index, tech) in techs | filter: query">
-                  <span>
-                      <span>{{tech.name}}</span>
-                      <button class="btn btn-sm btn-danger pull-right" ng-click="remove(index)"><span class="glyphicon glyphicon-remove"></span></button>
-                  </span>
-              </li>
-          </ul>
-        </div>
-    </div>
+<body ng-app="jsFatigueApp">
+    <app-header></app-header>
+    <tech-list></tech-list>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="app.js"></script>
-    <script src="tech/_list.js"></script>
-    <script src="tech/list_service.js"></script>
+    <script src="tech/tech.module.js"></script>
+    <script src="tech/tech.service.js"></script>
+    <script src="tech/tech-list.directive.js"></script>
+    <script src="layout/layout.module.js"></script>
+    <script src="layout/app-header.directive.js"></script>
 </body>
 
 </html>
