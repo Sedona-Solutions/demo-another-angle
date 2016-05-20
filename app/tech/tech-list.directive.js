@@ -1,18 +1,26 @@
 'use strict';
 
 angular.module('jsFatigueApp.tech')
-    .directive('techList', function () {
+    .directive('techList', (TechListService) => {
+
+        class TechList {
+
+            constructor(){
+                TechListService.getTechs().then((techs) => {
+                    this.techs = techs.data;
+                });
+            }
+
+            remove(index) {
+                this.techs.splice(index, 1);
+            }
+        }
+
         return {
             selector: 'E',
-            controller: function ($scope, TechListService) {
-                TechListService.getTechs().then(function (techs) {
-                    $scope.techs = techs.data;
-                });
-
-                $scope.remove = function (index) {
-                    $scope.techs.splice(index, 1);
-                };
-            },
+            controller: TechList,
+            bindToController: true,
+            controllerAs: '$ctrl',
             templateUrl: 'app/tech/tech-list.directive.tpl.html'
         };
     });
