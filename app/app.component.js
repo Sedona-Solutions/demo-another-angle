@@ -38,9 +38,10 @@ import { Module } from 'ng-decorators/Module';
     directives: [ AppHeader ]
 })
 export class JsFatigue {
-    constructor() {
-        this._listFilter = '';
-    }
+
+    _listFilter: String = '';
+
+    constructor() {}
 
     setListFilter({ query }) {
         this._listFilter = query;

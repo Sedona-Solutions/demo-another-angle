@@ -19,18 +19,18 @@ import { Module } from 'ng-decorators/Module';
 })
 export class TechList {
 
-    constructor(techListService) {
+    constructor(private techListService : TechListService) {
         this.techListService = techListService;
     }
 
 
-    $onInit() {
+    $onInit() : void {
         this.techListService.getTechs().then((techs) => {
             this.techs = techs.data;
         });
     }
 
-    remove(index) {
+    remove(index: int) : void {
         this.techs.splice(index, 1);
     }
 }
