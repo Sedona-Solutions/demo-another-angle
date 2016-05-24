@@ -9,7 +9,7 @@
         }
 
         updateSearch() {
-            this.onUpdate(this.search.query);
+            this.onUpdate({ query: this.query });
         }
     }
     angular.module('sdn.SearchBar', [])
@@ -17,9 +17,9 @@
             template: `
                 <input type="text" class="form-control" ng-model="$ctrl.query" ng-change="$ctrl.updateSearch()" placeholder="Search..."/>
             `,
+            controller: SdnSearchBar,
             bindings: {
                 'onUpdate' : '&'
             }
         });
 })();
-

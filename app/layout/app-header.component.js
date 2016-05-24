@@ -4,8 +4,8 @@
     class AppHeader {
         constructor() {}
 
-        updateSearch(query) {
-            this.onSearchUpdate(query);
+        updateSearch({ query }) {
+            this.onSearchUpdate({ query });
         }
     }
 
@@ -19,7 +19,7 @@
                         </div>
                     <div class="navbar-form navbar-right">
                         <div class="form-group">
-                            <sdn-search-bar on-update="$ctrl.updateSearch(query)"></sdn-search-bar>
+                            <sdn-search-bar on-update="$ctrl.updateSearch({ query : query })"></sdn-search-bar>
                         </div>
                     </div>
                 </nav>
@@ -30,4 +30,3 @@
             controller: AppHeader
         });
 })();
-

@@ -7,8 +7,8 @@
             this._listFilter = '';
         }
 
-        setListFilter(filter) {
-            this._listFilter = filter;
+        setListFilter({ query }) {
+            this._listFilter = query;
         }
 
         get listFilter() {
@@ -21,10 +21,9 @@
         'jsFatigueApp.tech'
     ]).component('jsFatigue', {
         template: `
-            <app-header on-search-update="$ctrl.setListFilter(search)"></app-header>
+            <app-header on-search-update="$ctrl.setListFilter({ query : query })"></app-header>
             <tech-list filter="$ctrl.listFilter"></tech-list>
-        `
+        `,
+        controller: JsFatigue
     });
 })();
-
-
