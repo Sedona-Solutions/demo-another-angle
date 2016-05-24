@@ -20,8 +20,10 @@ import { Module } from 'ng-decorators/Module';
 })
 export class SdnSearchBar {
 
+    query : String = ''
+    onUpdate : (obj: { query }) => void
+
     constructor() {
-        this.query = '';
     }
 
     updateSearch() {

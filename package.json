@@ -4,8 +4,10 @@
   "description": "demo another angle",
   "main": "index.html",
   "scripts": {
-    "start": "lite-server",
-    "postinstall": "jspm i"
+    "start": "npm run tsc && concurrently \"npm run tsc:w\" \"lite-server\" ",
+    "postinstall": "jspm i && typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,12 @@
   },
   "homepage": "https://github.com/Sedona-Solutions/demo-another-angle#readme",
   "devDependencies": {
+    "concurrently": "^2.1.0",
     "jspm": "^0.16.34",
-    "lite-server": "^2.2.0"
+    "lite-server": "^2.2.0",
+    "rimraf": "^2.5.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
   },
   "jspm": {
     "configFile": "system.config.js",
@@ -32,7 +38,6 @@
       "ui-router-extras": "npm:ui-router-extras@^0.1.2"
     },
     "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
     }
   }
 }

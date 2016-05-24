@@ -5,6 +5,10 @@ import { TechListService } from 'app/tech/tech.service';
 import { Component } from 'ng-decorators/Component';
 import { Module } from 'ng-decorators/Module';
 
+interface Tech {
+    name: String
+}
+
 @Module({
     name: 'jsFatigueApp.tech',
     templatesDependencies: false
@@ -19,10 +23,11 @@ import { Module } from 'ng-decorators/Module';
 })
 export class TechList {
 
-    constructor(private techListService : TechListService) {
+    techs: Tech[]
+
+    constructor (private techListService : TechListService) {
         this.techListService = techListService;
     }
-
 
     $onInit() : void {
         this.techListService.getTechs().then((techs) => {
@@ -30,7 +35,7 @@ export class TechList {
         });
     }
 
-    remove(index: int) : void {
+    remove(index: number) : void {
         this.techs.splice(index, 1);
     }
 }

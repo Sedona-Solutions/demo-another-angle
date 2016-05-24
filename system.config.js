@@ -1,7 +1,16 @@
 System.config({
     baseURL: "/",
     defaultJSExtensions: true,
-    transpiler: "typescript",
+    transpiler: 'none',
+    packages: {
+        app: {
+            main: 'app.component.js'
+            defaultExtension: 'js'
+        },
+        "ng-decorators": {
+            defaultExtension: 'js'
+        }
+    },
     paths: {
         "github:*": "jspm_packages/github/*",
         "npm:*": "jspm_packages/npm/*"

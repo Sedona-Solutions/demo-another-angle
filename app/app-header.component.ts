@@ -22,6 +22,8 @@ import { Component } from 'ng-decorators/Component';
     }
 })
 export class AppHeader {
+
+    onSearchUpdate: (obj: { query }) => void;
     constructor() {}
 
     updateSearch({ query }) {
