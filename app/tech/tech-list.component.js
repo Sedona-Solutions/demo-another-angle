@@ -1,10 +1,26 @@
 'use strict';
 
+import { TechListService } from 'app/tech/tech.service';
 
-class TechList {
+import { Component } from 'ng-decorators/Component';
+import { Module } from 'ng-decorators/Module';
 
-    constructor(TechListService) {
-        this.techListService = TechListService;
+@Module({
+    name: 'jsFatigueApp.tech',
+    templatesDependencies: false
+})
+@Component({
+    selector: 'tech-list',
+    templateUrl: 'app/tech/tech-list.component.tpl.html',
+    bindings: {
+        filter: '<'
+    },
+    providers: [ TechListService ]
+})
+export class TechList {
+
+    constructor(techListService) {
+        this.techListService = techListService;
     }
 
 
@@ -18,11 +34,3 @@ class TechList {
         this.techs.splice(index, 1);
     }
 }
-
-export let TechListComponent = {
-    controller: TechList,
-    templateUrl: 'app/tech/tech-list.component.tpl.html',
-    bindings: {
-        filter: '<'
-    }
-};

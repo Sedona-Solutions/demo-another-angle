@@ -1,3 +1,6 @@
+import { Injectable } from 'ng-decorators/Injectable';
+
+@Injectable()
 export class TechListService {
 
     constructor($http) {

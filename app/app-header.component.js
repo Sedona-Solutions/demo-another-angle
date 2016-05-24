@@ -1,16 +1,9 @@
 "use strict";
 
-class AppHeader {
-    constructor() {}
+import { Component } from 'ng-decorators/Component';
 
-    updateSearch({ query }) {
-        this.onSearchUpdate({
-            query
-        });
-    }
-}
-
-export let AppHeaderComponent = {
+@Component({
+    selector: 'app-header',
     template: `
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
@@ -26,6 +19,12 @@ export let AppHeaderComponent = {
         `,
     bindings: {
         onSearchUpdate: '&'
-    },
-    controller: AppHeader
-};
+    }
+})
+export class AppHeader {
+    constructor() {}
+
+    updateSearch({ query }) {
+        this.onSearchUpdate({ query });
+    }
+}
