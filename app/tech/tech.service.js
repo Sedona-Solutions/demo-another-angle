@@ -1,16 +1,12 @@
-angular.module('jsFatigueApp.tech')
-    .factory('TechListService', ($http) => {
+export class TechListService {
 
-        class TechListService {
+    constructor($http) {
+        this.$http = $http;
+    }
 
-            constructor(){}
-
-            getTechs () {
-                return $http.get('seed/techs.json').success((techs) => {
-                    return techs;
-                });
-            }
-        }
-
-        return new TechListService();
-    });
+    getTechs() {
+        return this.$http.get('seed/techs.json').success((techs) => {
+            return techs;
+        });
+    }
+}

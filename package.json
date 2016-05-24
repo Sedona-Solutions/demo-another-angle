@@ -4,10 +4,8 @@
   "description": "demo another angle",
   "main": "index.html",
   "scripts": {
-    "build": "babel app --out-dir dist",
-    "build:watch": "babel app --watch --out-dir dist",
-    "start": "npm run build && lite-server && npm run build:watch",
-    "postinstall": "bower i"
+    "start": "lite-server",
+    "postinstall": "jspm i"
   },
   "repository": {
     "type": "git",
@@ -28,6 +26,10 @@
   },
   "jspm": {
     "configFile": "system.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.5",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",

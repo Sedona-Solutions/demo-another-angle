@@ -12,14 +12,11 @@
 
 <body ng-app="jsFatigueApp">
     <js-fatigue></js-fatigue>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="dist/app.component.js"></script>
-    <script src="dist/commons/search-bar.component.js"></script>
-    <script src="dist/tech/tech.module.js"></script>
-    <script src="dist/tech/tech.service.js"></script>
-    <script src="dist/tech/tech-list.component.js"></script>
-    <script src="dist/layout/layout.module.js"></script>
-    <script src="dist/layout/app-header.component.js"></script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="system.config.js"></script>
+    <script>
+        System.import('app/app.component');
+    </script>
 </body>
 
 </html>

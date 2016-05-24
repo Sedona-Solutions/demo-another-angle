@@ -1,5 +1,5 @@
 {
   "port": 8080,
-  "files": ["./index.html", "./dist/**/*.{html,htm,css,js}", "./bower_components/**/*.{js,css}"],
+  "files": ["./index.html", "./system.config.js", "./app/**/*.{html,htm,css,js}", "./jspm_packages/**/*.{js,css}"],
   "server": { "baseDir": "." }
 }
