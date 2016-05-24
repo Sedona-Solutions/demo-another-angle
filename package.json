@@ -23,6 +23,15 @@
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
+    "jspm": "^0.16.34",
     "lite-server": "^2.2.0"
+  },
+  "jspm": {
+    "configFile": "system.config.js",
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
