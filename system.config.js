@@ -4,10 +4,7 @@ System.config({
     transpiler: 'none',
     packages: {
         app: {
-            main: 'app.component.js'
-            defaultExtension: 'js'
-        },
-        "ng-decorators": {
+            main: 'app.component.js',
             defaultExtension: 'js'
         }
     },

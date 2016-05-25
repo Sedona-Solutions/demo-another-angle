@@ -24,7 +24,7 @@
     "jspm": "^0.16.34",
     "lite-server": "^2.2.0",
     "rimraf": "^2.5.2",
-    "typescript": "^1.8.10",
+    "typescript": "^1.9.0-dev.20160525-1.0",
     "typings": "^1.0.4"
   },
   "jspm": {
@@ -37,7 +37,6 @@
       "ocLazyLoad": "github:ocombe/oclazyload@^1.0.9",
       "ui-router-extras": "npm:ui-router-extras@^0.1.2"
     },
-    "devDependencies": {
-    }
+    "devDependencies": {}
   }
 }

@@ -1,6 +1,7 @@
 "use strict";
 
-import angular from 'angular';
+///<reference path="../typings/ng-decorators.d.ts"/>
+///<reference path="../../typings/index.d.ts"/>
 
 import { Component } from 'ng-decorators/Component';
 import { Module } from 'ng-decorators/Module';
@@ -22,6 +23,7 @@ export class SdnSearchBar {
 
     query : String = ''
     onUpdate : (obj: { query }) => void
+    public static $ngmodule: { name: String }
 
     constructor() {
     }

@@ -1,5 +1,7 @@
 "use strict";
 
+///<reference path="./typings/ng-decorators.d.ts"/>
+
 import { Component } from 'ng-decorators/Component';
 
 @Component({

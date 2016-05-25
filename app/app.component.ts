@@ -1,6 +1,8 @@
 "use strict";
 
-import angular from 'angular';
+///<reference path="./typings/ng-decorators.d.ts"/>
+///<reference path="../typings/index.d.ts"/>
+
 import 'angular-ui-router';
 import 'ui-router-extras';
 import 'ocLazyLoad';

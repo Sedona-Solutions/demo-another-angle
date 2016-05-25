@@ -1,5 +1,5 @@
 {
   "port": 8080,
-  "files": ["./index.html", "./system.config.js", "./dist/**/*.{html,htm,css,js,ts}", "./jspm_packages/**/*.{js,ts,css}"],
+  "files": ["./index.html", "./system.config.js", "./app/**/*.{html, js, map, css}", "./jspm_packages/**/*.{js,css}"],
   "server": { "baseDir": "." }
 }

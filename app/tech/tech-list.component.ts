@@ -1,13 +1,15 @@
 'use strict';
 
+///<reference path="../typings/ng-decorators.d.ts"/>
+
 import { TechListService } from 'app/tech/tech.service';
+import { ITech } from './ITech';
+
 
 import { Component } from 'ng-decorators/Component';
 import { Module } from 'ng-decorators/Module';
 
-interface Tech {
-    name: String
-}
+
 
 @Module({
     name: 'jsFatigueApp.tech',
@@ -23,14 +25,15 @@ interface Tech {
 })
 export class TechList {
 
-    techs: Tech[]
+    techs: ITech[]
+    public static $ngmodule: { name: String }
 
     constructor (private techListService : TechListService) {
         this.techListService = techListService;
     }
 
     $onInit() : void {
-        this.techListService.getTechs().then((techs) => {
+        this.techListService.getTechs().then((techs : any) => {
             this.techs = techs.data;
         });
     }
