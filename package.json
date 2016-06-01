@@ -7,7 +7,7 @@
     "build": "babel app --out-dir dist",
     "build:watch": "babel app --watch --out-dir dist",
     "start": "npm run build && lite-server && npm run build:watch",
-    "postinstall": "bower i"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
