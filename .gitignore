@@ -1,3 +1,6 @@
 bower_components
 .idea
 *~
+/dist
+/node_modules
+/jspm_packages
