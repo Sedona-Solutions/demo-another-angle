@@ -27,3 +27,7 @@ Each branch of this repository represent a stage in an evolution from straight `
 - [`es5`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es5) contains the app as a 2-file structure, using ES5 with no components or service and static data
 - [`SoC`](https://github.com/Sedona-Solutions/demo-another-angle/tree/SoC) refactoring for separation of concerns thanks to the `service` and `directive` angular helpers, and use the built-in `$http` service to make an Ajax request
 - [`es6`](https://github.com/Sedona-Solutions/demo-another-angle/tree/es6) first moves from an es5 syntax to es6 using class and arrow functions
+- [`components`](https://github.com/Sedona-Solutions/demo-another-angle/tree/components) refactoring with a component approach
+- [`systemjs`](https://github.com/Sedona-Solutions/demo-another-angle/tree/systemjs) refactoring using SystemJS loader and jspm (instead of bower)
+- [`decorators`](https://github.com/Sedona-Solutions/demo-another-angle/tree/decorators) refactoring using angularjs-decorators
+- [`ts`](https://github.com/Sedona-Solutions/demo-another-angle/tree/ts) use TypeScript instead of Babel / es6
