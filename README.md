@@ -16,9 +16,9 @@ This app needs [bower](http://bower.io/#install-bower) installed in order to ins
 
 To install the dependencies, simply run:
 
-    $ bower install
+    $ npm install
 
-Then, serve the root folder using your favorite tool. (nginx, Apache, http-server...)
+Then, run the lite-server using ``npm start``
 
 ## How to read this repository
 
